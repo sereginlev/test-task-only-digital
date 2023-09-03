@@ -1,0 +1,159 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 16px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	overflow: hidden;
+}
+
+:root {
+	--width: 40px;
+	--height: 40px;
+	--border-radius: 20px;
+	--max-width: 400px;
+	--opacity: 0.6;
+	--green: 106, 191, 75;
+	--blue: 56, 119, 238;
+	--padding-right: calc(var(--width) / 2);
+}
+
+.image {
+	width:100vw;
+	height:100vh;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	position: absolute;
+	height: var(--height);
+	width: var(--width);
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: rgba(var(--blue), var(--opacity));
+	color: #fff;
+   transition: width 1s ease, opacity 1s ease;
+	cursor: pointer;
+}
+
+.green {
+	background-color: rgba(var(--green), var(--opacity));
+}
+
+.button-active {
+	max-width: var(--max-width);
+	border-radius: var(--border-radius);
+}
+
+.text {
+	position: absolute;
+	right: 100%;
+	white-space: nowrap;
+	opacity: 0;
+	overflow: hidden;
+	padding-right: var(--padding-right);
+	transition: opacity 1s ease, right 1s ease;
+	z-index: 1;
+}
+
+.span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: var(--height);
+	width: var(--width);
+	border-radius: 50%;
+	z-index: 2;
+}
+
+.span:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 2px;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+}
+
+.span:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 2px;
+	background-color: #fff;
+	transform: translate(-50%, -50%) rotate(90deg);
+	transition: transform 0.3s ease;
+}
+
+.span-active:after {
+	transform: translate(-50%, -50%) rotate(0deg);
+	transition: transform 0.3s ease;
+}
+
+.btn-1 {
+	top: 65%;
+	left: 23%;
+}
+
+.btn-2 {
+	top: 26%;
+	left: 30%;
+}
+
+.btn-3 {
+	top: 44%;
+	left: 36%;
+}
+
+.btn-4 {
+	top: 73%;
+	left: 58%;
+}
+
+.btn-5 {
+	top: 58%;
+	left: 56%;
+}
+
+.btn-6 {
+	top: 37%;
+	left: 60%;
+}
+
+.btn-7 {
+	top: 21%;
+	left: 71.5%;
+}
+
+.btn-8 {
+	top: 43%;
+	left: 74%;
+}
+
+.btn-9 {
+	top: 62%;
+	left: 68%;
+}
+
+.btn-10 {
+	top: 66%;
+	left: 83%;
+} 
